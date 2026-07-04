@@ -4,6 +4,7 @@
 #include<queue>
 #include<map>
 #include <vector>
+#include<chrono>
 using namespace std;
 
 struct tnode{
@@ -39,7 +40,7 @@ tnode* Huffman(map<unsigned char,int> &Simbols){
 
 void spanHuffman(string currCode,tnode* t,map<unsigned char,string> &HuffmanTABLE){
     if(!t) return;
-    if(!(t->left) and !(t->right)){
+    if(!(t->left) && !(t->right)){
         HuffmanTABLE[t->value]=currCode;
     }
     spanHuffman(currCode + '0', t->left, HuffmanTABLE);
@@ -50,6 +51,10 @@ void spanHuffman(string currCode,tnode* t,map<unsigned char,string> &HuffmanTABL
 int main(){
     string archiveName = "";
     cin >> archiveName;
+
+    // 2. MARCA O INÍCIO DO TEMPO TOTAL (INCLUI LEITURA DE ARQUIVO)
+    auto start_total = chrono::high_resolution_clock::now();
+
     ifstream inFile(archiveName, ios::binary);
     if (!inFile.is_open()) {
         cout << "error" << endl;
@@ -63,12 +68,18 @@ int main(){
     inFile.read(reinterpret_cast<char*>(buffer.data()), sz);
     inFile.close();
 
+    // 3. MARCA O INÍCIO DO PROCESSAMENTO DO ALGORITMO DE HUFFMAN
+    auto start_huffman = chrono::high_resolution_clock::now();
+
 
     map<unsigned char,int> Simbols;
     for(unsigned char i : buffer) Simbols[i]++;
     map<unsigned char,string> HuffmanTABLE;
     tnode* r= Huffman(Simbols);
     spanHuffman("", r, HuffmanTABLE);
+
+    // 4. MARCA O FIM DO ALGORITMO PURE DE HUFFMAN (ANTES DA ESCRITA EM DISCO)
+    auto end_huffman = chrono::high_resolution_clock::now();
 
     //opening output file
     ofstream outFile("output.bin", ios::binary);
@@ -112,5 +123,21 @@ int main(){
         outFile.write(reinterpret_cast<const char*>(&byte), sizeof(byte));
     }
     outFile.close();
+
+    // 5. MARCA O FIM DO TEMPO TOTAL
+    auto end_total = chrono::high_resolution_clock::now();
+
+    // 6. CALCULA OS INTERVALOS EM MILISSEGUNDOS
+    chrono::duration<double, milli> duration_huffman = end_huffman - start_huffman;
+    chrono::duration<double, milli> duration_total = end_total - start_total;
+
+    // 7. EXIBE AS MÉTRICAS DE TEMPO PRÁTICO
+    cout << "\n=========================================" << endl;
+    cout << "Compressao Huffman concluida com sucesso!" << endl;
+    cout << "Tempo do algoritmo (Arvore/Tabela): " << duration_huffman.count() << " ms" << endl;
+    cout << "Tempo total (I/O de Disco + Algoritmo): " << duration_total.count() << " ms" << endl;
+    cout << "=========================================" << endl;
+
+    return 0;
 }
 
