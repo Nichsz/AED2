@@ -54,4 +54,4 @@ Execute o descompressor. Como a saída do compressor anterior é sempre `output.
 ./decompressor
 # Digite o arquivo a descompactar: output.bin
 ```
-*   Saída: O programa lerá o binário, reconstruirá o arquivo original de texto totalmente restaurado (ex: `recovered_lzw.txt`), sem perda de nenhum byte.
+*   Saída: O programa lerá o binário, reconstruirá o arquivo original de texto totalmente restaurado (ex: `recovered_output.txt`), sem perda de nenhum byte.
