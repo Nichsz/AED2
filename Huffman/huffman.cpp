@@ -52,7 +52,6 @@ int main(){
     string archiveName = "";
     cin >> archiveName;
 
-    // 2. MARCA O INÍCIO DO TEMPO TOTAL (INCLUI LEITURA DE ARQUIVO)
     auto start_total = chrono::high_resolution_clock::now();
 
     ifstream inFile(archiveName, ios::binary);
@@ -68,9 +67,7 @@ int main(){
     inFile.read(reinterpret_cast<char*>(buffer.data()), sz);
     inFile.close();
 
-    // 3. MARCA O INÍCIO DO PROCESSAMENTO DO ALGORITMO DE HUFFMAN
     auto start_huffman = chrono::high_resolution_clock::now();
-
 
     map<unsigned char,int> Simbols;
     for(unsigned char i : buffer) Simbols[i]++;
@@ -78,17 +75,14 @@ int main(){
     tnode* r= Huffman(Simbols);
     spanHuffman("", r, HuffmanTABLE);
 
-    // 4. MARCA O FIM DO ALGORITMO PURE DE HUFFMAN (ANTES DA ESCRITA EM DISCO)
     auto end_huffman = chrono::high_resolution_clock::now();
 
-    //opening output file
     ofstream outFile("output.bin", ios::binary);
     if (!outFile.is_open()) {
         cout << "error" << endl;
         return 1;
     }
 
-    //sending header decompresser data
     int numSimbols = Simbols.size();
     outFile.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
     outFile.write(reinterpret_cast<const char*>(&numSimbols), sizeof(numSimbols));
@@ -97,7 +91,6 @@ int main(){
         outFile.write(reinterpret_cast<const char*>(&par.second), sizeof(par.second));
     }
 
-    // sending compressed data
     unsigned char byte = 0; 
     int bit_count = 0;
     for(unsigned char c : buffer){
@@ -115,7 +108,7 @@ int main(){
             }
         }
     }
-    //padding the data
+
     int padding = 0;
     if (bit_count > 0) {
         padding = 8 - bit_count;
@@ -124,20 +117,11 @@ int main(){
     }
     outFile.close();
 
-    // 5. MARCA O FIM DO TEMPO TOTAL
     auto end_total = chrono::high_resolution_clock::now();
-
-    // 6. CALCULA OS INTERVALOS EM MILISSEGUNDOS
     chrono::duration<double, milli> duration_huffman = end_huffman - start_huffman;
     chrono::duration<double, milli> duration_total = end_total - start_total;
-
-    // 7. EXIBE AS MÉTRICAS DE TEMPO PRÁTICO
-    cout << "\n=========================================" << endl;
-    cout << "Compressao Huffman concluida com sucesso!" << endl;
-    cout << "Tempo do algoritmo (Arvore/Tabela): " << duration_huffman.count() << " ms" << endl;
     cout << "Tempo total (I/O de Disco + Algoritmo): " << duration_total.count() << " ms" << endl;
-    cout << "=========================================" << endl;
-
+    
     return 0;
 }
 
