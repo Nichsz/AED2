@@ -24,9 +24,9 @@ Trabalho acadêmico desenvolvido em colaboração pelos integrantes:
 *   **Integrante 2** - Gabriela Jacintho Perez RA: `11202421338` 
 *   **Integrante 3** - João Guilherme Caetano de Andrade RA: `11202321249` 
 *   **Integrante 4** - Júlia Muniz Carvalho RA: `11202421988` 
-*   **Integrante 5** - Leonardo Pavlavicius Estigarriba RA: `11202230855` 
+*   **Integrante 5** - Leonardo Pavlavicius Estigarribia RA: `11202230855` 
 *   **Integrante 6** - Lucas Fernandes Ataide RA: `11202421363` 
-*   **Integrante 7** - Luís Emílio Gonçalves Dias RA: `11202421308` 
+*   **Integrante 7** - Luís Emílio Gonçalves Mendes RA: `11202421308` 
 *   **Integrante 8** - Nicholas Fernandez Garcia RA: `11202421369`
 
 ---
