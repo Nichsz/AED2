@@ -26,7 +26,7 @@ Trabalho acadêmico desenvolvido em colaboração pelos integrantes:
 
 ## Como Compilar e Executar os Programas LZW
 
-O projeto possui dois códigos independentes em C++ padrão (ISO C++11): um para a compressão e outro para a descompressão. Ambos seguem o mesmo fluxo simples de execução por terminal.
+O projeto possui dois códigos independentes em C++ padrão: um para a compressão e outro para a descompressão. Ambos seguem o mesmo fluxo simples de execução por terminal.
 
 ### Passo 1: Compressão
 Compila o compressor (lzw.cpp ou huffman.cpp) para realizar os testes de tempo de execução:
