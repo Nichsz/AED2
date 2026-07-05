@@ -29,7 +29,7 @@ Trabalho acadêmico desenvolvido em colaboração pelos integrantes:
 O projeto possui dois códigos independentes em C++ padrão (ISO C++11): um para a compressão e outro para a descompressão. Ambos seguem o mesmo fluxo simples de execução por terminal.
 
 ### Passo 1: Compressão
-Compila o compressor (lzw ou huffman) para realizar os testes de tempo de execução:
+Compila o compressor (lzw.cpp ou huffman.cpp) para realizar os testes de tempo de execução:
 ```bash
 g++ compressor.cpp -o compressor
 ```
@@ -44,7 +44,7 @@ Execute o programa e digite o nome do arquivo original de texto que deseja compa
 ---
 
 ### Passo 2: Descompressão
-Compila o descompressor:
+Compila o descompressor (lzw_dec.cpp ou huffman_dec.cpp):
 ```bash
 g++ decompressor.cpp -o decompressor
 ```
