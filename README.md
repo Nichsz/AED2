@@ -1,6 +1,6 @@
 # Projeto AED2 - Análise Comparativa de Compressão: LZW vs. Huffman em Cenários de Comunicação Tática (IoMT)
 
-Este repositório contém a implementação prática desenvolvida para o projeto final da disciplina de Algoritmos e Estruturas de Dados II (AED-II) ministrada pelo professor Carlo Kleber da Silva Rodrigues.
+Este repositório contém a implementação prática e os dados experimentais desenvolvidos para o projeto final da disciplina de Algoritmos e Estruturas de Dados II (AED-II) ministrada pelo professor Carlo Kleber da Silva Rodrigues.
 
 ---
 
