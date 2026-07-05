@@ -6,7 +6,6 @@ Este repositório contém a implementação prática desenvolvida para o projeto
 
 # Resumo do Projeto
 O trabalho apresenta uma análise competitiva entre os algoritmos clássicos de compressão de dados sem perdas (*lossless*) Lempel-Ziv-Welch (LZW) de 12 bits e a Codificação de Huffman, aplicados ao cenário de Internet de Coisas Militar (IoMT). 
-
 Avaliamos o desempenho de ambos os algoritmos na redução de payloads típicos de transmissões de rádio tático Ad-Hoc/LoRa (como coordenadas GPS, mensagens de texto estruturadas e telemetria militar). O objetivo principal é diminuir o tempo de antena (*airtime*) das transmissões, resultando em conservação de bateria dos dispositivos táticos portáteis e na redução da probabilidade de detecção eletromagnética das tropas contra sistemas de guerra eletrônica inimigos (LPD - *Low Probability of Detection*).
 
 ---
