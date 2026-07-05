@@ -62,3 +62,9 @@ Execute o descompressor. Como a saída do compressor anterior é sempre `output.
 # Digite o arquivo a descompactar: output.bin
 ```
 *   Saída: O programa lerá o binário, reconstruirá o arquivo original de texto totalmente restaurado (ex: `recovered_output.txt`), sem perda de nenhum byte.
+
+## Artigo e Apresentação
+Se deseja saber mais sobre o nosso projeto, acesse os documentos abaixo:
+
+*   [📘 Artigo Científico - (PDF)](documentos/Artigo_AED2.pdf)
+*   [📊 Slides da Apresentação (PDF)](documentos/Apresentacao_AED2.pdf)
