@@ -5,15 +5,16 @@ Este repositório contém a implementação prática desenvolvida para o projeto
 ---
 
 ## Resumo do Projeto
-O trabalho consiste em uma análise experimental comparativa entre os algoritmos clássicos de compressão de dados sem perdas (lossless): Lempel-Ziv-Welch (LZW) de 12 bits e a Codificação de Huffman.
+O trabalho consiste em uma análise experimental comparativa entre os algoritmos clássicos de compressão de dados sem perdas (*lossless*): Lempel-Ziv-Welch (LZW) de 12 bits e a Codificação de Huffman. 
 
 Para avaliar os algoritmos em um cenário de aplicação realista, simulamos fluxos de dados típicos de uma rede de Internet de Coisas Militar (IoMT - Internet of Military Things) e de Comunicação Tática. Avaliamos o desempenho dos algoritmos sobre massas de dados de sensoriamento e transmissão tática, tais como:
+*   **Mensagens e relatórios táticos de texto** (`mensagens.txt`, `relatorio.txt`).
+*   **Coordenadas de posicionamento geográfico** (`coordenadas.txt`).
+*   **Leituras de telemetria de mísseis e biometria de combate** (`telemetria_misseis.txt`, `biometria_soldado.txt`).
+*   **Padrões de repetição estruturada e alfabeto reduzido** (`mapa_satelite.txt`, `codebook.txt`, `morse_binario.txt`) testados em três diferentes escalas de tamanho (Pequeno: ~6 KB, Médio: 251 KB, Grande: 3001 KB).
 
-Mensagens e relatórios táticos de texto (mensagens.txt, relatorio.txt).
-Coordenadas de posicionamento geográfico (coordenadas.txt).
-Leituras de telemetria de mísseis e biometria de combate (telemetria_misseis.txt, biometria_soldado.txt).
-Padrões de repetição estruturada e alfabeto reduzido (mapa_satelite.txt, codebook.txt, morse_binario.txt) testados em três diferentes escalas de tamanho (Pequeno: ~6 KB, Médio: 251 KB, Grande: 3001 KB).
-O objetivo principal da compressão neste cenário é encurtar o tamanho físico das mensagens antes da transmissão. Na prática militar, pacotes menores reduzem o tempo de rádio ativo no ar (airtime), resultando em conservação de bateria dos dispositivos táticos de campo e diminuindo a pegada eletromagnética das tropas contra interceptações de guerra eletrônica inimiga (LPD - Low Probability of Detection).
+O objetivo principal da compressão neste cenário é encurtar o tamanho físico das mensagens antes da transmissão. Na prática militar, pacotes menores reduzem o tempo de rádio ativo no ar (*airtime*), resultando em conservação de bateria dos dispositivos táticos de campo e diminuindo a pegada eletromagnética das tropas contra interceptações de guerra eletrônica inimiga (LPD - *Low Probability of Detection*).
+
 ---
 
 ## Integrantes do Grupo
