@@ -1,0 +1,19 @@
+RELATÓRIO DE TEMPO DE DESCOMPRESSÃO TOTAL
+Anotado via C++ (I/O de Disco + Algoritmo)
+============================================================
+Arquivo                        | Huffman (ms)    | LZW (ms)       
+------------------------------------------------------------
+biometria_soldado.txt          | 57.66           | 106.02         
+codebook_1.txt                 | 0.39            | 1.87           
+codebook_2.txt                 | 11.53           | 22.49          
+codebook_3.txt                 | 132.13          | 239.53         
+coordenadas.txt                | 55.57           | 138.34         
+mapa_satelite_1.txt            | 0.20            | 0.61           
+mapa_satelite_2.txt            | 5.03            | 9.30           
+mapa_satelite_3.txt            | 63.71           | 89.70          
+mensagens.txt                  | 52.10           | 114.51         
+morse_binario_1.txt            | 0.21            | 1.18           
+morse_binario_2.txt            | 6.16            | 14.41          
+morse_binario_3.txt            | 72.76           | 137.00         
+relatorio.txt                  | 206.12          | 385.27         
+telemetria_misseis.txt         | 61.55           | 139.50         
