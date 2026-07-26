@@ -67,4 +67,4 @@ Execute o descompressor. Como a saída do compressor anterior é sempre `output.
 Se deseja saber mais sobre o nosso projeto, acesse os documentos abaixo:
 
 *   [📘 Artigo Científico - (PDF)](documentos/Artigo_AED2.pdf)
-*   [📊 Slides da Apresentação (PDF)](documentos/Apresentacao_AED2.pdf)
+*   [📊 Slides da Apresentação (PDF)](documentos/Apresentação_AED2.pdf)
